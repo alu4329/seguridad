@@ -1,0 +1,192 @@
+Alumno: Víctor Plaza Martín
+Asignatura: Seguridad de Sistemas informáticos
+
+HISTORIAL (contiene una nota explicativa al pie del mismo):
+
+  501  sudo apt-get install openssl
+  502  ls
+  503  mkdir seguridad
+  504  ls
+  505  cd seguridad/
+  506  ls
+  507  sudo mkdir certificados
+  508  cd certificados/
+  509  ls
+  510  opensll
+  511  openssl
+  512  sudo openssl req -x509 -newkey rsa:2048 -days 1095 -keyout CAkey.pem -out CAcert.pem
+  513  sudo openssl genrsa -des3 -out serv-priv.pem -passout pass:sslfsv 2048
+  514  sudo openssl req -new -subj "/DC=root.com/OU=com/CN=root" -key
+  515  sudo openssl req -new -subj "/DC=root.com/OU=com/CN=root" -key serv-priv.pem -passin pass:sslfsv -out petic-certificado-serv.pem
+  516  vi config1.txt
+  517  ls
+  518  vi config1.txt
+  519  cd ..
+  520  ls
+  521  sudo chmod 777 certificados/
+  522  cd certificados/
+  523  ls
+  524  vi config1.txt
+  525  ls
+  526  sudo openssl x509 -CA CAcert.pem -CAkey CAkey.pem -req -in petic-certificado-serv.pem -days 15 -extfile config1.txt -sha1 -CAcreateserial -out servidor-cert.pem
+  527  ls
+  528  vi asd.txt
+  529  sudo openssl genrsa -des3 -passout pass:sslfsv -out client-priv.pem 2048
+  530  sudo openssl req -new -key client-priv.pem -passin pass:sslfsv –subj "/DC=localhost/OU=com/CN=Fsv" -out petic-cert-client.pem
+  531  sudo openssl req -new -key client-priv.pem -passin pass:sslfsv -subj "/DC=localhost/OU=com/CN=Fsv" -out petic-cert-client.pem
+  532  vi config2.txt
+  533  sudo openssl x509 -CA CAcert.pem -CAkey CAkey.pem -req -in petic-cert-client.pem -set_serial 3 -days 15 -extfile config2.txt -sha1 -out client-cert.pem
+  543  cd etc/
+  544  ls
+  545  cd ssl
+  547  vi openssl.cnf 
+  548  sudo vi index.txt
+  549  ls
+  550  sudo vi openssl.cnf 
+  551  sudo openssl ca -gencrl -out listarev.crl
+  552  vi openssl.cnf 
+  553  sudo vi openssl.cnf 
+  554  sudo openssl ca -gencrl -out listarev.crl
+  560  cd etc/ssl/
+  562  sudo vi openssl.cnf 
+  563  sudo openssl ca -gencrl -out listarev.crl
+  564  sudo openssl ca -gencrl -out listarev.pem
+  565  sudo openssl ca -revoke client-cert.pem
+  566  ls
+  567  vi index.txt 
+  573  cd home/victor/seguridad/certificados/
+  574  ls
+  575  sudo openssl ca -revoke client-cert.pem
+  576  sudo openssl ca -gencrl -out listarev.crl
+  577  history  501  sudo apt-get install openssl
+  502  ls
+  503  mkdir seguridad
+  504  ls
+  505  cd seguridad/
+  506  ls
+  507  sudo mkdir certificados
+  508  cd certificados/
+  509  ls
+  510  opensll
+  511  openssl
+  512  sudo openssl req -x509 -newkey rsa:2048 -days 1095 -keyout CAkey.pem -out CAcert.pem
+  513  sudo openssl genrsa -des3 -out serv-priv.pem -passout pass:sslfsv 2048
+  514  sudo openssl req -new -subj "/DC=root.com/OU=com/CN=root" -key
+  515  sudo openssl req -new -subj "/DC=root.com/OU=com/CN=root" -key serv-priv.pem -passin pass:sslfsv -out petic-certificado-serv.pem
+  516  vi config1.txt
+  517  ls
+  518  vi config1.txt
+  519  cd ..
+  520  ls
+  521  sudo chmod 777 certificados/
+  522  cd certificados/
+  523  ls
+  524  vi config1.txt
+  525  ls
+  526  sudo openssl x509 -CA CAcert.pem -CAkey CAkey.pem -req -in petic-certificado-serv.pem -days 15 -extfile config1.txt -sha1 -CAcreateserial -out servidor-cert.pem
+  527  ls
+  528  vi asd.txt
+  529  sudo openssl genrsa -des3 -passout pass:sslfsv -out client-priv.pem 2048
+  530  sudo openssl req -new -key client-priv.pem -passin pass:sslfsv –subj "/DC=localhost/OU=com/CN=Fsv" -out petic-cert-client.pem
+  531  sudo openssl req -new -key client-priv.pem -passin pass:sslfsv -subj "/DC=localhost/OU=com/CN=Fsv" -out petic-cert-client.pem
+  532  vi config2.txt
+  533  sudo openssl x509 -CA CAcert.pem -CAkey CAkey.pem -req -in petic-cert-client.pem -set_serial 3 -days 15 -extfile config2.txt -sha1 -out client-cert.pem
+  547  vi openssl.cnf 
+  548  sudo vi index.txt
+  549  ls
+  550  sudo vi openssl.cnf 
+  551  sudo openssl ca -gencrl -out listarev.crl
+  552  vi openssl.cnf 
+  553  sudo vi openssl.cnf 
+  554  sudo openssl ca -gencrl -out listarev.crl
+  555  ls
+  556  ls -la
+  559  ls
+  560  cd etc/ssl/
+  561  ls
+  562  sudo vi openssl.cnf 
+  563  sudo openssl ca -gencrl -out listarev.crl
+  564  sudo openssl ca -gencrl -out listarev.pem
+  565  sudo openssl ca -revoke client-cert.pem
+  566  ls
+  567  vi index.txt 
+  568  ls
+  569  cd ..
+  570  ls
+  571  cd ..
+  572  ls
+  573  cd home/victor/seguridad/certificados/
+  574  ls
+  575  sudo openssl ca -revoke client-cert.pem
+  576  sudo openssl ca -gencrl -out listarev.crl
+  577  history  501  sudo apt-get install openssl
+  502  ls
+  503  mkdir seguridad
+  504  ls
+  505  cd seguridad/
+  506  ls
+  507  sudo mkdir certificados
+  508  cd certificados/
+  509  ls
+  510  opensll
+  511  openssl
+  512  sudo openssl req -x509 -newkey rsa:2048 -days 1095 -keyout CAkey.pem -out CAcert.pem
+  513  sudo openssl genrsa -des3 -out serv-priv.pem -passout pass:sslfsv 2048
+  514  sudo openssl req -new -subj "/DC=root.com/OU=com/CN=root" -key
+  515  sudo openssl req -new -subj "/DC=root.com/OU=com/CN=root" -key serv-priv.pem -passin pass:sslfsv -out petic-certificado-serv.pem
+  516  vi config1.txt
+  517  ls
+  518  vi config1.txt
+  519  cd ..
+  520  ls
+  521  sudo chmod 777 certificados/
+  522  cd certificados/
+  523  ls
+  524  vi config1.txt
+  525  ls
+  526  sudo openssl x509 -CA CAcert.pem -CAkey CAkey.pem -req -in petic-certificado-serv.pem -days 15 -extfile config1.txt -sha1 -CAcreateserial -out servidor-cert.pem
+  527  ls
+  528  vi asd.txt
+  529  sudo openssl genrsa -des3 -passout pass:sslfsv -out client-priv.pem 2048
+  530  sudo openssl req -new -key client-priv.pem -passin pass:sslfsv –subj "/DC=localhost/OU=com/CN=Fsv" -out petic-cert-client.pem
+  531  sudo openssl req -new -key client-priv.pem -passin pass:sslfsv -subj "/DC=localhost/OU=com/CN=Fsv" -out petic-cert-client.pem
+  532  vi config2.txt
+  533  sudo openssl x509 -CA CAcert.pem -CAkey CAkey.pem -req -in petic-cert-client.pem -set_serial 3 -days 15 -extfile config2.txt -sha1 -out client-cert.pem
+  547  vi openssl.cnf 
+  548  sudo vi index.txt
+  549  ls
+  550  sudo vi openssl.cnf 
+  551  sudo openssl ca -gencrl -out listarev.crl
+  552  vi openssl.cnf 
+  553  sudo vi openssl.cnf 
+  554  sudo openssl ca -gencrl -out listarev.crl
+  559  ls
+  560  cd etc/ssl/
+  561  ls
+  562  sudo vi openssl.cnf 
+  563  sudo openssl ca -gencrl -out listarev.crl
+  564  sudo openssl ca -gencrl -out listarev.pem
+  565  sudo openssl ca -revoke client-cert.pem
+  566  ls
+  567  vi index.txt 
+  573  cd home/victor/seguridad/certificados/
+  574  ls
+  575  sudo openssl ca -revoke client-cert.pem
+  576  sudo openssl ca -gencrl -out listarev.crl
+  577  history
+
+NOTA: he elimiando del historial algunas de las entradas de comandos repetitivos como
+pueden ser los ls, los cd,...
+
+PROBLEMAS ENCONTRADOS: a la hora de modificar el openssl.cnf tarde un poco debido a que
+no estaba referenciando bien la ubicación de mis claves. Para hacerlo correctamente lo que
+hice fue hacer uso del atributo certs, al cual le añadí la ruta hasta mi carpeta "certificados".
+De esta manera, simplemente modificar donde en el guión dice "$dir" por "$certs" en los casos 
+necesarios.
+
+Por otra parte no encontré muchas más dificultades, quizás el hecho de que el comando:
+	sudo openssl ca -revoke client-cert.pem
+tuve que realizarlo desde el directorio "certificados" lo cual me consumió un par de minutos hasta
+darme cuenta de ello.
+
+
